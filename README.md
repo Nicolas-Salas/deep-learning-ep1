@@ -44,6 +44,7 @@ Al ejecutar el notebook completo se generan además:
 | Archivo | Contenido |
 | :--- | :--- |
 | `modelo_final.keras` | Modelo entrenado con la configuración seleccionada |
+| `modelo_final_pesos.npz` | Pesos del modelo final en formato NumPy, independiente de la versión de Keras |
 | `resultados_experimentos.csv` | Registro consolidado de todas las corridas con sus métricas |
 
 ---
@@ -132,7 +133,7 @@ Cada experimento varía **un único parámetro** y mantiene fijo el resto.
 | El efecto de la regularización es acotado | Rango de F1 de 0,0019 entre las seis variantes; Dropout 0.2 obtiene el menor val_loss_min (0,2341) |
 | El optimizador no altera el desempeño final | F1 entre 0,9132 y 0,9133 con los tres; RMSprop converge un 24,5% más rápido y SGD no alcanza a converger en 100 épocas |
 
-### Desempeño del modelo final (conjunto de test)
+### Desempeño del modelo final (conjunto de test)   
 
 | Métrica | Valor |
 | :--- | :---: |
